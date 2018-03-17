@@ -7,6 +7,6 @@ data <- read.table("household_power_consumption.txt", header = TRUE, sep = ";", 
         mutate(datetime = dmy_hms(paste(Date, Time))) %>% tbl_df
 
 # Plot into png
-png(file="Plot1.png")
+png(file="Plot1.png", bg = "transparent")
 hist(data$Global_active_power, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
 dev.off()
